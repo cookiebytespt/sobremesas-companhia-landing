@@ -52,11 +52,11 @@ export function QuoteForm() {
             Diga-nos o essencial e respondemos em menos de 24 horas com uma proposta à medida. Sem compromisso.
           </p>
           <a
-            href={site.instagram}
+            href={site.whatsapp ? `https://wa.me/${site.whatsapp}` : site.instagram}
             className="mt-8 inline-flex items-center gap-2 text-[0.95rem] underline underline-offset-4"
           >
             <Icon name="chat" className="h-5 w-5" />
-            Prefere falar por mensagem? Estamos no Instagram.
+            {site.whatsapp ? "Prefere falar já? Envie-nos uma mensagem no WhatsApp." : "Prefere falar por mensagem? Estamos no Instagram."}
           </a>
         </div>
 

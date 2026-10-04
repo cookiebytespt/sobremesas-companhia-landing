@@ -6,10 +6,9 @@ export const site = {
   tagline: "Fabrico caseiro",
   location: "Santo Tirso",
   instagram: "https://www.instagram.com/sobremesas.e.companhia/",
-  facebook: "https://www.facebook.com/companhiaesobremesas/",
-  // TODO: confirm with the client. Digits only, with country code (e.g. "351912345678").
-  whatsapp: "",
-  // TODO: confirm with the client.
+  facebook: "https://www.facebook.com/profile.php?id=1087851201236726",
+  // Digits only, with country code.
+  whatsapp: "+351961906158",
   email: "",
 };
 

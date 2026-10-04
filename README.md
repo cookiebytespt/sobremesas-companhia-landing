@@ -9,7 +9,7 @@ npm run build    # static site in ./out (any static host: Vercel, Netlify, GitHu
 ```
 
 ## Before publishing
-- `src/content/site.ts`: set `whatsapp` and/or `email` so the quote form can send requests
+- `src/content/site.ts`: WhatsApp is set (961 906 158); add `email` if they want a fallback
   (it opens WhatsApp with the message pre-filled; falls back to email).
 - Photos: the 8 in `public/images/instagram/` come from the client's Instagram feed (640px, Instagram's web size). Ask the client for the originals for sharper images, then update `gallery` in `src/content/site.ts`.
   The hero photos are in `src/components/Hero.tsx`.

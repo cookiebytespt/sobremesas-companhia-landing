@@ -12,6 +12,11 @@ export function Footer() {
             <Icon name="instagram" className="h-5 w-5" /> Instagram
           </a>
           <a href={site.facebook} className="hover:underline underline-offset-4">Facebook</a>
+          {site.whatsapp && (
+            <a href={`https://wa.me/${site.whatsapp}`} className="inline-flex items-center gap-2 hover:underline underline-offset-4">
+              <Icon name="chat" className="h-5 w-5" /> WhatsApp 961 906 158
+            </a>
+          )}
         </div>
       </div>
       <div className="mx-auto max-w-6xl px-5 pb-8 text-sm text-acucar/60 md:px-8">
