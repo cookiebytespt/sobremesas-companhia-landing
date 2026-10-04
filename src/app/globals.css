@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* Palette taken from the Sobremesas & Companhia logo and Instagram highlight badges */
+@theme {
+  --color-acucar: #fffdfb;      /* sugar white — page background */
+  --color-po: #d6e5f0;          /* powder blue — hero field, badges */
+  --color-po-fundo: #7fa3bf;    /* deeper powder blue — line icons, borders */
+  --color-cacau: #4b2e22;       /* chocolate — text, primary buttons */
+  --color-cacau-suave: #7a5a4b; /* softer chocolate — secondary text */
+  --color-merengue: #f6dfe0;    /* blush pink — accent band */
+  --color-folha: #6e8f9e;       /* leaf blue-grey — flourishes */
+
+  --font-display: "Young Serif", Georgia, serif;
+  --font-sans: "Figtree Variable", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  background: var(--color-acucar);
+  color: var(--color-cacau);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cacau);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Signature element: the scalloped edge of a cake doily, also used on the Instagram highlight badges */
+.scallop-bottom {
+  --s: 22px;
+  mask:
+    radial-gradient(var(--s) at 50% calc(100% - var(--s)), #000 99%, #0000 101%) 50% / calc(2 * var(--s)) 100% repeat-x,
+    linear-gradient(#000 0 0) top / 100% calc(100% - var(--s)) no-repeat;
+  padding-bottom: var(--s);
+}
+.scallop-top {
+  --s: 22px;
+  mask:
+    radial-gradient(var(--s) at 50% var(--s), #000 99%, #0000 101%) 50% / calc(2 * var(--s)) 100% repeat-x,
+    linear-gradient(#000 0 0) bottom / 100% calc(100% - var(--s)) no-repeat;
+  padding-top: var(--s);
+}
+
+/* Scalloped circle badge (like the story highlights) */
+.scallop-badge {
+  clip-path: polygon(
+    50% 0%, 61% 3.4%, 71% 2.9%, 78% 9.5%, 88% 12%, 90.5% 22%, 97% 29%, 96.6% 39%, 100% 50%,
+    96.6% 61%, 97% 71%, 90.5% 78%, 88% 88%, 78% 90.5%, 71% 97%, 61% 96.6%, 50% 100%,
+    39% 96.6%, 29% 97%, 22% 90.5%, 12% 88%, 9.5% 78%, 3% 71%, 3.4% 61%, 0% 50%,
+    3.4% 39%, 3% 29%, 9.5% 22%, 12% 12%, 22% 9.5%, 29% 3%, 39% 3.4%
+  );
+}
+
+/* Arched photo frame, like a cake dome */
+.arch {
+  border-radius: 999px 999px 18px 18px;
+}
+
+/* Hero entrance: the one orchestrated motion moment */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.rise-1 { animation-delay: 0.1s; }
+.rise-2 { animation-delay: 0.25s; }
+.rise-3 { animation-delay: 0.4s; }
