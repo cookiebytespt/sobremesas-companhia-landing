@@ -1,6 +1,6 @@
 # Sobremesas & Companhia — landing page
 
-Next.js 16 (App Router) + Tailwind CSS 4, exported as a static site.
+Next.js 16 (App Router) + Tailwind CSS 4, exported as a static site. Node 24 LTS (`nvm use`).
 
 ```bash
 npm install
