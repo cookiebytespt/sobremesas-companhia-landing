@@ -26,3 +26,8 @@ npm run build    # static site in ./out (any static host: Vercel, Netlify, GitHu
 
 Type: Young Serif (headings) + Figtree (body), self-hosted via Fontsource.
 Signature element: scalloped "doily" edges and badges, taken from the Instagram highlights.
+
+## Deploy (GitHub Pages)
+`.github/workflows/nextjs.yml` builds on push to `main`. The site is served from `/sobremesas-companhia-landing`,
+so the workflow passes `NEXT_PUBLIC_BASE_PATH`; images in `public/` must be referenced through `asset()` (`src/lib/asset.ts`).
+On a root domain (e.g. a custom domain later), leave `NEXT_PUBLIC_BASE_PATH` empty.

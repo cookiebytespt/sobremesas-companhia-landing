@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { Icon } from "./Icon";
 
 const tints = ["bg-po", "bg-merengue", "bg-[#ece4da]", "bg-acucar"];
@@ -18,7 +19,7 @@ export function Photo({
 }) {
   if (src) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={src} alt={alt} loading="lazy" className={`object-cover ${className}`} />;
+    return <img src={asset(src)} alt={alt} loading="lazy" className={`object-cover ${className}`} />;
   }
   return (
     <div
