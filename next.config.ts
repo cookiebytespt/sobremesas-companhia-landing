@@ -8,6 +8,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const nextConfig: NextConfig = {
   output: "export",
   basePath,
+  // /en/ → out/en/index.html, so every language works on plain static hosts (GitHub Pages included).
+  trailingSlash: true,
   images: { unoptimized: true },
 };
 

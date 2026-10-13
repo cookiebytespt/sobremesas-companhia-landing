@@ -1,31 +1,51 @@
 "use client";
 
 import { useState } from "react";
-import { gallery, occasions, site, type OccasionId } from "@/content/site";
+import { site, type OccasionId } from "@/content/site";
+import { fmt, type Dictionary } from "@/i18n";
 import { Icon } from "./Icon";
 import { Photo } from "./Photo";
 
-export function Creations() {
+const PAGE = 12;
+
+type Occasion = { id: OccasionId; icon: string; label: string };
+type Item = { title: string; occasion: OccasionId; src?: string; tall?: boolean };
+
+export function Creations({
+  t,
+  occasions,
+  items: gallery,
+}: {
+  t: Dictionary["creations"];
+  occasions: Occasion[];
+  items: Item[];
+}) {
   const [active, setActive] = useState<OccasionId | null>(null);
+  const [visible, setVisible] = useState(PAGE);
   const items = active ? gallery.filter((g) => g.occasion === active) : gallery;
+  const shown = items.slice(0, visible);
+  const select = (id: OccasionId | null) => {
+    setActive(id);
+    setVisible(PAGE);
+  };
   const iconFor = (id: OccasionId) => occasions.find((o) => o.id === id)?.icon ?? "whisk";
 
   return (
     <section id="criacoes" className="mx-auto max-w-6xl scroll-mt-6 px-5 py-20 md:px-8 md:py-28">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div className="max-w-xl">
-          <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">O que fazemos</h2>
+          <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">{t.title}</h2>
           <p className="mt-4 text-lg leading-relaxed text-cacau-suave">
-            Cada bolo é pensado para a pessoa e para a festa. Escolha uma ocasião para ver trabalhos anteriores.
+            {t.intro}
           </p>
         </div>
         <a href={site.instagram} className="inline-flex items-center gap-2 text-[0.95rem] underline underline-offset-4">
           <Icon name="instagram" className="h-5 w-5" />
-          Mais no Instagram
+          {t.instagram}
         </a>
       </div>
 
-      <div role="group" aria-label="Filtrar por ocasião" className="mt-12 flex gap-5 overflow-x-auto pb-3 md:justify-between md:gap-4">
+      <div role="group" aria-label={t.filter} className="mt-12 flex gap-5 overflow-x-auto pb-3 md:justify-between md:gap-4">
         {occasions.map((o) => {
           const selected = active === o.id;
           return (
@@ -33,7 +53,7 @@ export function Creations() {
               key={o.id}
               type="button"
               aria-pressed={selected}
-              onClick={() => setActive(selected ? null : o.id)}
+              onClick={() => select(selected ? null : o.id)}
               className="group flex shrink-0 flex-col items-center gap-3 rounded-lg"
             >
               <span
@@ -50,11 +70,13 @@ export function Creations() {
       </div>
 
       <p className="sr-only" aria-live="polite">
-        {active ? `A mostrar ${items.length} trabalhos de ${occasions.find((o) => o.id === active)?.label}` : "A mostrar todos os trabalhos"}
+        {active
+          ? fmt(t.showingOccasion, { count: items.length, occasion: occasions.find((o) => o.id === active)?.label ?? "" })
+          : t.showingAll}
       </p>
 
       <div className="mt-12 columns-2 gap-4 md:columns-3 lg:columns-4 md:gap-5">
-        {items.map((g, i) => (
+        {shown.map((g, i) => (
           <figure key={g.title} className="mb-4 break-inside-avoid md:mb-5">
             <Photo
               src={g.src}
@@ -67,13 +89,25 @@ export function Creations() {
         ))}
       </div>
 
+      {shown.length < items.length && (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setVisible((v) => v + PAGE)}
+            className="rounded-full border border-cacau/30 px-7 py-3.5 font-medium hover:border-cacau"
+          >
+            {fmt(t.more, { count: items.length - shown.length })}
+          </button>
+        </div>
+      )}
+
       {active && (
         <button
           type="button"
-          onClick={() => setActive(null)}
+          onClick={() => select(null)}
           className="mt-4 text-[0.95rem] underline underline-offset-4"
         >
-          Mostrar todas as ocasiões
+          {t.showAll}
         </button>
       )}
     </section>

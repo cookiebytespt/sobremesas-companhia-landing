@@ -69,6 +69,8 @@ jobs:
         env:
           # e.g. "/sobremesas-companhia-landing"; used for basePath and for <img> paths (src/lib/asset.ts)
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # Full public URL (with base path); used for the hreflang/canonical links between languages
+          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

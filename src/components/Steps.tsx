@@ -1,17 +1,17 @@
-import { steps } from "@/content/site";
+import type { Dictionary } from "@/i18n";
 
-export function Steps() {
+export function Steps({ t }: { t: Dictionary["steps"] }) {
   return (
     <section id="como-funciona" className="scroll-mt-6 border-y border-cacau/10 bg-[#fbf6f1]">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-8 md:py-24">
         <div>
-          <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">Como encomendar</h2>
+          <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">{t.title}</h2>
           <p className="mt-4 max-w-[38ch] text-lg leading-relaxed text-cacau-suave">
-            Somos um casal e tratamos de cada encomenda do princípio ao fim. Menus para 15 a 200 convidados.
+            {t.intro}
           </p>
         </div>
         <ol className="grid gap-10">
-          {steps.map((s, i) => (
+          {t.items.map((s, i) => (
             <li key={s.title} className="grid grid-cols-[3.25rem_1fr] gap-5">
               <span className="font-display text-[2.6rem] leading-none text-po-fundo">{i + 1}</span>
               <div>

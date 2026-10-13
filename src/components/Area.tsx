@@ -1,14 +1,15 @@
 import { serviceArea, site } from "@/content/site";
+import { fmt, type Dictionary } from "@/i18n";
 import { Icon } from "./Icon";
 
-export function Area() {
+export function Area({ t }: { t: Dictionary["area"] }) {
   return (
     <section id="onde" className="mx-auto max-w-6xl scroll-mt-6 px-5 py-20 md:px-8 md:py-28">
       <div className="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
-          <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">Levamos a festa até si</h2>
+          <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">{t.title}</h2>
           <p className="mt-4 max-w-[44ch] text-lg leading-relaxed text-cacau-suave">
-            A cozinha fica em {site.location}. Entregamos e montamos em todo o distrito do Porto e no Minho.
+            {fmt(t.body, { location: site.location })}
           </p>
         </div>
         <ul className="flex flex-wrap gap-3">

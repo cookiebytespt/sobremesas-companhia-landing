@@ -33,6 +33,22 @@ const paths: Record<string, React.ReactNode> = {
       <circle cx="10" cy="15" r="0.8" />
     </>
   ),
+  cupcake: (
+    <>
+      <path d="M7 13l1.5 7h7L17 13" />
+      <path d="M5 13c0-2 1.5-3 3-3 0-2.5 2-4 4-4s4 1.5 4 4c1.5 0 3 1 3 3z" />
+      <circle cx="12" cy="4" r="1" />
+    </>
+  ),
+  vase: (
+    <>
+      <path d="M9 21h6l1-6H8z" />
+      <path d="M12 15V9M12 12l-3-3M12 12l3-3" />
+      <circle cx="12" cy="7" r="1.6" />
+      <circle cx="8" cy="7.5" r="1.6" />
+      <circle cx="16" cy="7.5" r="1.6" />
+    </>
+  ),
   platter: (
     <>
       <path d="M3 17h18M5 17a7 7 0 0114 0M12 10V8M10 8h4" />
