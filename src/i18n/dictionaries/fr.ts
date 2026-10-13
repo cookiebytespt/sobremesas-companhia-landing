@@ -4,8 +4,8 @@ const fr: Dictionary = {
   meta: {
     title: "Sobremesas & Companhia : gâteaux, douceurs et traiteur à Santo Tirso",
     description:
-      "Gâteaux décorés, biscuits, tables de desserts et service traiteur faits avec amour pour mariages, baptêmes, communions et anniversaires dans le district de Porto et le Minho.",
-    ogDescription: "Gâteaux, douceurs et traiteur faits avec amour pour vos grands jours.",
+      "Gâteaux décorés, biscuits, tables de desserts et service traiteur en petite production, faits avec soin pour mariages, baptêmes, communions et anniversaires dans le district de Porto et le Minho.",
+    ogDescription: "Gâteaux, douceurs et traiteur en petite production, faits avec soin pour vos grands jours.",
   },
   header: {
     home: "Sobremesas & Companhia, accueil",
@@ -17,9 +17,9 @@ const fr: Dictionary = {
     menu: "Menu",
     closeMenu: "Fermer le menu",
   },
-  wordmark: { tagline: "Fait avec amour à {location}" },
+  wordmark: { tagline: "Petite production, faite avec soin" },
   hero: {
-    title: "Gâteaux et douceurs faits avec amour, pour les jours qui comptent.",
+    title: "Gâteaux et douceurs faits avec soin, pour les jours qui comptent.",
     intro:
       "Mariages, baptêmes, communions et anniversaires. Gâteaux décorés, biscuits, tables de desserts et service traiteur, de Santo Tirso à Viana do Castelo.",
     quote: "Demander un devis",

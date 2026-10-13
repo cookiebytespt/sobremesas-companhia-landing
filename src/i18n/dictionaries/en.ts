@@ -4,8 +4,8 @@ const en: Dictionary = {
   meta: {
     title: "Sobremesas & Companhia: cakes, sweets and catering in Santo Tirso",
     description:
-      "Decorated cakes, cookies, dessert tables and catering made with love for weddings, christenings, communions and birthdays across the Porto district and the Minho region.",
-    ogDescription: "Cakes, sweets and catering made with love for your special days.",
+      "Small-batch decorated cakes, cookies, dessert tables and catering, made with care for weddings, christenings, communions and birthdays across the Porto district and the Minho region.",
+    ogDescription: "Small-batch cakes, sweets and catering, made with care for your special days.",
   },
   header: {
     home: "Sobremesas & Companhia, home",
@@ -17,9 +17,9 @@ const en: Dictionary = {
     menu: "Menu",
     closeMenu: "Close menu",
   },
-  wordmark: { tagline: "Made with love in {location}" },
+  wordmark: { tagline: "Small-batch, made with care" },
   hero: {
-    title: "Cakes and sweets made with love, for the days that matter.",
+    title: "Cakes and sweets made with care, for the days that matter.",
     intro:
       "Weddings, christenings, communions and birthdays. Decorated cakes, cookies, dessert tables and catering, from Santo Tirso to Viana do Castelo.",
     quote: "Get a quote",

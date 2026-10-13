@@ -4,8 +4,8 @@ const es: Dictionary = {
   meta: {
     title: "Sobremesas & Companhia: tartas, dulces y catering en Santo Tirso",
     description:
-      "Tartas decoradas, galletas, mesas dulces y catering hechos con amor para bodas, bautizos, comuniones y cumpleaños en el distrito de Oporto y el Miño.",
-    ogDescription: "Tartas, dulces y catering hechos con amor para sus días especiales.",
+      "Tartas decoradas, galletas, mesas dulces y catering de pequeña producción, hechos con dedicación para bodas, bautizos, comuniones y cumpleaños en el distrito de Oporto y el Miño.",
+    ogDescription: "Tartas, dulces y catering de pequeña producción, con dedicación, para sus días especiales.",
   },
   header: {
     home: "Sobremesas & Companhia, inicio",
@@ -17,9 +17,9 @@ const es: Dictionary = {
     menu: "Menú",
     closeMenu: "Cerrar menú",
   },
-  wordmark: { tagline: "Hecho con amor en {location}" },
+  wordmark: { tagline: "Pequeña producción, con dedicación" },
   hero: {
-    title: "Tartas y dulces hechos con amor, para los días que cuentan.",
+    title: "Tartas y dulces hechos con dedicación, para los días que cuentan.",
     intro:
       "Bodas, bautizos, comuniones y cumpleaños. Tartas decoradas, galletas, mesas dulces y catering, de Santo Tirso a Viana do Castelo.",
     quote: "Pedir presupuesto",

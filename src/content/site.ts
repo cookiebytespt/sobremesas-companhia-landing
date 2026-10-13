@@ -5,7 +5,7 @@ import type { Locale } from "@/i18n/config";
 
 export const site = {
   name: "Sobremesas & Companhia",
-  tagline: "Feito com amor",
+  tagline: "Pequena produção, com dedicação",
   location: "Santo Tirso",
   instagram: "https://www.instagram.com/sobremesas.e.companhia/",
   facebook: "https://www.facebook.com/profile.php?id=1087851201236726",

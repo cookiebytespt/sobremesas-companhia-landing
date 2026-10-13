@@ -5,8 +5,8 @@ const pt = {
   meta: {
     title: "Sobremesas & Companhia: bolos, doces e catering em Santo Tirso",
     description:
-      "Bolos decorados, bolachas, mesas de doces e catering feitos com amor para casamentos, batizados, comunhões e aniversários no distrito do Porto e Minho.",
-    ogDescription: "Bolos, doces e catering feitos com amor para os seus dias especiais.",
+      "Bolos decorados, bolachas, mesas de doces e catering de pequena produção, feitos com dedicação para casamentos, batizados, comunhões e aniversários no distrito do Porto e Minho.",
+    ogDescription: "Bolos, doces e catering de pequena produção, com dedicação, para os seus dias especiais.",
   },
   header: {
     home: "Sobremesas & Companhia, início",
@@ -18,9 +18,9 @@ const pt = {
     menu: "Menu",
     closeMenu: "Fechar menu",
   },
-  wordmark: { tagline: "Feito com amor em {location}" },
+  wordmark: { tagline: "Pequena produção, com dedicação" },
   hero: {
-    title: "Bolos e doces feitos com amor, para os dias que contam.",
+    title: "Bolos e doces feitos com dedicação, para os dias que contam.",
     intro:
       "Casamentos, batizados, comunhões e aniversários. Bolos decorados, bolachas, mesas de doces e catering, de Santo Tirso a Viana do Castelo.",
     quote: "Pedir orçamento",
