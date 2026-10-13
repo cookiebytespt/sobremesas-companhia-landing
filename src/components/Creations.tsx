@@ -31,7 +31,7 @@ export function Creations({
   const iconFor = (id: OccasionId) => occasions.find((o) => o.id === id)?.icon ?? "whisk";
 
   return (
-    <section id="criacoes" className="mx-auto max-w-6xl scroll-mt-6 px-5 py-20 md:px-8 md:py-28">
+    <section id="criacoes" className="mx-auto max-w-6xl scroll-mt-6 px-5 py-16 md:px-8 md:py-28">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div className="max-w-xl">
           <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">{t.title}</h2>
@@ -45,7 +45,7 @@ export function Creations({
         </a>
       </div>
 
-      <div role="group" aria-label={t.filter} className="mt-12 flex gap-5 overflow-x-auto pb-3 md:justify-between md:gap-4">
+      <div role="group" aria-label={t.filter} className="no-scrollbar fade-edge -mx-5 mt-10 flex snap-x scroll-px-5 gap-4 overflow-x-auto px-5 pb-3 md:mx-0 md:mt-12 md:justify-between md:gap-4 md:px-0">
         {occasions.map((o) => {
           const selected = active === o.id;
           return (
@@ -54,16 +54,16 @@ export function Creations({
               type="button"
               aria-pressed={selected}
               onClick={() => select(selected ? null : o.id)}
-              className="group flex shrink-0 flex-col items-center gap-3 rounded-lg"
+              className="group flex shrink-0 snap-start flex-col items-center gap-2.5 rounded-lg"
             >
               <span
-                className={`scallop-badge grid h-[84px] w-[84px] place-items-center transition-colors md:h-24 md:w-24 ${
+                className={`scallop-badge grid h-[72px] w-[72px] place-items-center transition-colors md:h-24 md:w-24 ${
                   selected ? "bg-cacau text-acucar" : "bg-po text-cacau group-hover:bg-[#c3d8e8]"
                 }`}
               >
-                <Icon name={o.icon} className="h-8 w-8" />
+                <Icon name={o.icon} className="h-7 w-7 md:h-8 md:w-8" />
               </span>
-              <span className={`text-[0.95rem] ${selected ? "font-semibold" : ""}`}>{o.label}</span>
+              <span className={`text-[0.9rem] md:text-[0.95rem] ${selected ? "font-semibold" : ""}`}>{o.label}</span>
             </button>
           );
         })}
@@ -75,15 +75,15 @@ export function Creations({
           : t.showingAll}
       </p>
 
-      <div className="mt-12 columns-2 gap-4 md:columns-3 lg:columns-4 md:gap-5">
+      <div className="mt-8 columns-2 gap-3 md:mt-12 md:columns-3 lg:columns-4 md:gap-5">
         {shown.map((g, i) => (
-          <figure key={g.title} className="mb-4 break-inside-avoid md:mb-5">
+          <figure key={g.title} className="mb-3 break-inside-avoid md:mb-5">
             <Photo
               src={g.src}
               alt={g.title}
               icon={iconFor(g.occasion)}
               tint={i % 3}
-              className={`w-full rounded-2xl ${g.tall ? "aspect-[4/5]" : "aspect-square"}`}
+              className={`w-full rounded-xl md:rounded-2xl ${g.tall ? "aspect-[4/5]" : "aspect-square"}`}
             />
           </figure>
         ))}

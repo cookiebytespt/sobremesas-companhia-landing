@@ -19,7 +19,7 @@ export function Photo({
 }) {
   if (src) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={asset(src)} alt={alt} loading="lazy" className={`object-cover ${className}`} />;
+    return <img src={asset(src)} alt={alt} loading="lazy" className={`bg-[#ece4da] object-cover ${className}`} />;
   }
   return (
     <div

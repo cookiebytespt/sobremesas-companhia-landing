@@ -14,6 +14,8 @@ const fr: Dictionary = {
     links: { criacoes: "Créations", comoFunciona: "Comment ça marche", onde: "Où nous trouver" },
     quote: "Demander un devis",
     quoteShort: "Devis",
+    menu: "Menu",
+    closeMenu: "Fermer le menu",
   },
   wordmark: { tagline: "Fait avec amour à {location}" },
   hero: {

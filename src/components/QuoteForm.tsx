@@ -6,7 +6,7 @@ import type { Dictionary } from "@/i18n";
 import { Icon } from "./Icon";
 
 const field =
-  "mt-2 w-full rounded-xl border border-cacau/20 bg-acucar px-4 py-3 text-[1rem] placeholder:text-cacau/40 focus:border-cacau focus:outline-none";
+  "mt-2 block min-h-12 w-full min-w-0 appearance-none rounded-xl border border-cacau/20 bg-acucar px-4 py-3 text-[1rem] placeholder:text-cacau/40 focus:border-cacau focus:outline-none";
 const label = "block text-[0.95rem] font-medium";
 
 export function QuoteForm({
@@ -52,7 +52,7 @@ export function QuoteForm({
 
   return (
     <section id="orcamento" className="scallop-top scroll-mt-6 bg-merengue">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-[0.8fr_1.2fr] md:px-8 md:py-24">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-[0.8fr_1.2fr] md:px-8 md:py-24">
         <div>
           <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">{t.title}</h2>
           <p className="mt-4 max-w-[38ch] text-lg leading-relaxed text-cacau-suave">
@@ -84,10 +84,10 @@ export function QuoteForm({
             </button>
           </div>
         ) : (
-          <form onSubmit={onSubmit} className="grid gap-6 rounded-3xl bg-acucar p-6 md:grid-cols-2 md:p-10">
+          <form onSubmit={onSubmit} className="grid min-w-0 gap-5 rounded-3xl bg-acucar p-5 sm:p-6 md:grid-cols-2 md:gap-6 md:p-10">
             <label className={label}>
               {f.occasion}
-              <select name="ocasiao" required className={field} defaultValue="">
+              <select name="ocasiao" required className={`${field} select-chevron pr-10`} defaultValue="">
                 <option value="" disabled>
                   {f.choose}
                 </option>
@@ -136,7 +136,7 @@ export function QuoteForm({
             </label>
             <label className={label}>
               {f.contact}
-              <input name="contacto" autoComplete="email" required className={field} />
+              <input name="contacto" autoComplete="email" autoCapitalize="none" spellCheck={false} required className={field} />
             </label>
             <div className="md:col-span-2">
               <button

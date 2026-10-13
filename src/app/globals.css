@@ -75,3 +75,41 @@ body {
 .rise-1 { animation-delay: 0.1s; }
 .rise-2 { animation-delay: 0.25s; }
 .rise-3 { animation-delay: 0.4s; }
+
+/* ---- Mobile hardening ---- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  overflow-x: clip; /* no sideways wobble from shadows or the scalloped edges */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Horizontal scrollers (occasion filter) without a visible bar */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* iOS Safari collapses empty date inputs and centres their value */
+input[type="date"]::-webkit-date-and-time-value { text-align: left; min-height: 1.5em; }
+input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.6; }
+
+/* With appearance:none the native select arrow is gone, so draw one */
+.select-chevron {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234b2e22' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 1.1rem;
+}
+
+/* Smaller scallops on phones so the edge reads as lace, not bubbles */
+@media (max-width: 640px) {
+  .scallop-bottom, .scallop-top { --s: 14px; }
+}
+
+/* Hint that the occasion row scrolls sideways on phones */
+@media (max-width: 767px) {
+  .fade-edge {
+    mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+  }
+}

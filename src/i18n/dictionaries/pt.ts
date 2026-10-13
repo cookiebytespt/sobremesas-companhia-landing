@@ -15,6 +15,8 @@ const pt = {
     links: { criacoes: "Criações", comoFunciona: "Como funciona", onde: "Onde estamos" },
     quote: "Pedir orçamento",
     quoteShort: "Orçamento",
+    menu: "Menu",
+    closeMenu: "Fechar menu",
   },
   wordmark: { tagline: "Feito com amor em {location}" },
   hero: {

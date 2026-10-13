@@ -8,7 +8,7 @@ export function Footer({ t }: { t: Dictionary }) {
     <footer className="bg-cacau text-acucar">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
         <Wordmark onDark tagline={fmt(t.wordmark.tagline, { location: site.location })} />
-        <div className="flex flex-wrap gap-6 text-[0.95rem]">
+        <div className="flex flex-wrap gap-x-6 gap-y-4 text-[0.95rem]">
           <a href={site.instagram} className="inline-flex items-center gap-2 hover:underline underline-offset-4">
             <Icon name="instagram" className="h-5 w-5" /> Instagram
           </a>

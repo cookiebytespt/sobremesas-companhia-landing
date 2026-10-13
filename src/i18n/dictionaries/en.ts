@@ -14,6 +14,8 @@ const en: Dictionary = {
     links: { criacoes: "Our work", comoFunciona: "How it works", onde: "Where we are" },
     quote: "Get a quote",
     quoteShort: "Quote",
+    menu: "Menu",
+    closeMenu: "Close menu",
   },
   wordmark: { tagline: "Made with love in {location}" },
   hero: {
