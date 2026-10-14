@@ -25,13 +25,13 @@ export type OccasionId =
   | "decoracao";
 
 export const occasions: { id: OccasionId; icon: string }[] = [
+  { id: "catering", icon: "platter" },
   { id: "casamentos", icon: "rings" },
   { id: "batizados", icon: "dove" },
   { id: "comunhoes", icon: "cross" },
   { id: "aniversarios", icon: "candle" },
   { id: "sobremesas", icon: "cupcake" },
   { id: "bolachas", icon: "cookie" },
-  { id: "catering", icon: "platter" },
   { id: "decoracao", icon: "vase" },
 ];
 
