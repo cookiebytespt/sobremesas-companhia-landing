@@ -6,11 +6,12 @@ import { site } from "@/content/site";
 // Set by the deploy workflow; without it the hreflang/canonical links are left out.
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "").replace(/\/$/, "");
 
-export function pageMetadata(locale: Locale): Metadata {
+// `page.path` is relative to the locale root with a trailing slash (e.g. "privacy/"); omit it for the home page.
+export function pageMetadata(locale: Locale, page?: { path: string; title: string }): Metadata {
   const t = getDictionary(locale);
-  const url = (l: Locale) => `${siteUrl}${homePath(l)}`;
+  const url = (l: Locale) => `${siteUrl}${homePath(l)}${page?.path ?? ""}`;
   return {
-    title: t.meta.title,
+    title: page ? `${page.title} · ${site.name}` : t.meta.title,
     description: t.meta.description,
     alternates: siteUrl
       ? {
@@ -22,7 +23,7 @@ export function pageMetadata(locale: Locale): Metadata {
         }
       : undefined,
     openGraph: {
-      title: site.name,
+      title: page ? `${page.title} · ${site.name}` : site.name,
       description: t.meta.ogDescription,
       locale: localeInfo[locale].ogLocale,
       alternateLocale: locales.filter((l) => l !== locale).map((l) => localeInfo[l].ogLocale),

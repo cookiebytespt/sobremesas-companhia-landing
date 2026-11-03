@@ -24,7 +24,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <Area t={t.area} />
         <QuoteForm t={t.quote} occasions={occasionList} />
       </main>
-      <Footer t={t} />
+      <Footer t={t} locale={locale} />
     </>
   );
 }

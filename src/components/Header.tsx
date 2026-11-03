@@ -7,9 +7,9 @@ import { Wordmark } from "./Wordmark";
 
 export function Header({ locale, t }: { locale: Locale; t: Dictionary }) {
   const links = [
-    { href: "#criacoes", label: t.header.links.criacoes },
-    { href: "#como-funciona", label: t.header.links.comoFunciona },
-    { href: "#onde", label: t.header.links.onde },
+    { href: `${homePath(locale)}#criacoes`, label: t.header.links.criacoes },
+    { href: `${homePath(locale)}#como-funciona`, label: t.header.links.comoFunciona },
+    { href: `${homePath(locale)}#onde`, label: t.header.links.onde },
   ];
 
   return (
@@ -29,13 +29,13 @@ export function Header({ locale, t }: { locale: Locale; t: Dictionary }) {
           </nav>
           <LanguageSwitcher locale={locale} label={t.header.language} className="hidden lg:block" />
           <a
-            href="#orcamento"
+            href={`${homePath(locale)}#orcamento`}
             className="hidden rounded-full bg-cacau px-5 py-2.5 text-[0.95rem] font-medium whitespace-nowrap text-acucar hover:bg-[#3a2219] md:inline-block"
           >
             {t.header.quote}
           </a>
           <a
-            href="#orcamento"
+            href={`${homePath(locale)}#orcamento`}
             className="hidden rounded-full bg-cacau px-4 py-2.5 text-sm font-medium whitespace-nowrap text-acucar sm:inline-block md:hidden"
           >
             {t.header.quoteShort}

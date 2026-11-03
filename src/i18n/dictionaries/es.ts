@@ -113,7 +113,7 @@ const es: Dictionary = {
       contact: "Contacto",
     },
   },
-  footer: { siteBy: "Web de" },
+  footer: { siteBy: "Web de", privacy: "Privacidad" },
 };
 
 export default es;

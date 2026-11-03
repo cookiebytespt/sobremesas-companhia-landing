@@ -113,7 +113,7 @@ const fr: Dictionary = {
       contact: "Contact",
     },
   },
-  footer: { siteBy: "Site réalisé par" },
+  footer: { siteBy: "Site réalisé par", privacy: "Confidentialité" },
 };
 
 export default fr;

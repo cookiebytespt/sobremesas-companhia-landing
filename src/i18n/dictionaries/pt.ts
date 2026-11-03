@@ -115,7 +115,7 @@ const pt = {
       contact: "Contacto",
     },
   },
-  footer: { siteBy: "Site por" },
+  footer: { siteBy: "Site por", privacy: "Privacidade" },
 };
 
 export type Dictionary = typeof pt;

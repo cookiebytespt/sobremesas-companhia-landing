@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { site } from "@/content/site";
-import { fmt, type Dictionary } from "@/i18n";
+import { fmt, homePath, type Dictionary, type Locale } from "@/i18n";
 import { Icon } from "./Icon";
 import { Wordmark } from "./Wordmark";
 
-export function Footer({ t }: { t: Dictionary }) {
+export function Footer({ t, locale }: { t: Dictionary; locale: Locale }) {
   return (
     <footer className="bg-cacau text-acucar">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-8">
@@ -22,7 +23,9 @@ export function Footer({ t }: { t: Dictionary }) {
       </div>
       <div className="mx-auto max-w-6xl px-5 pb-8 text-sm text-acucar/60 md:px-8">
         © {new Date().getFullYear()} {site.name}. {t.footer.siteBy}{" "}
-        <a href="https://cookiebytes.pt" className="underline underline-offset-4">CookieBytes</a>.
+        <a href="https://cookiebytes.pt" className="underline underline-offset-4">CookieBytes</a>.{" "}
+        <span className="text-acucar/40">·</span>{" "}
+        <Link href={`${homePath(locale)}privacy/`} className="underline underline-offset-4">{t.footer.privacy}</Link>
       </div>
     </footer>
   );

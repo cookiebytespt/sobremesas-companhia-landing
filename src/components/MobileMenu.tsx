@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Locale } from "@/i18n";
+import { homePath, type Locale } from "@/i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 type Link = { href: string; label: string };
@@ -66,7 +66,7 @@ export function MobileMenu({
           <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
             <LanguageSwitcher locale={locale} label={labels.language} />
             <a
-              href="#orcamento"
+              href={`${homePath(locale)}#orcamento`}
               onClick={() => setOpen(false)}
               className="rounded-full bg-cacau px-6 py-3 font-medium text-acucar sm:hidden"
             >
