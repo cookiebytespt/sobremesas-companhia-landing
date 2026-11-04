@@ -19,7 +19,7 @@ export interface PrivacyContent {
 
 const CONTROLLER = 'Sobremesas & Companhia'
 const EMAIL = 'sobremesascompanhia@gmail.com'
-const UPDATED = '2026-11-03'
+const UPDATED = '2026-11-04'
 
 const pt: PrivacyContent = {
   title: 'Política de privacidade',
@@ -58,6 +58,7 @@ const pt: PrivacyContent = {
         'Google (Gmail, Contactos, Calendar) — a conta da empresa, como descrito acima.',
         'Fly.io (Amesterdão, Países Baixos) — alojamento da aplicação, da base de dados e das fotografias.',
         'Vercel — alojamento das páginas do site.',
+        'Cloudflare — estatísticas de visitas anónimas (Cloudflare Web Analytics), sem cookies nem dados pessoais.',
         'Resend (região UE) — envio dos e-mails de acesso da equipa.',
         'CookieBytes, Lda — manutenção técnica.',
       ],
@@ -118,6 +119,7 @@ const en: PrivacyContent = {
         "Google (Gmail, Contacts, Calendar) — the business's account, as described above.",
         'Fly.io (Amsterdam, Netherlands) — hosting of the application, database and photos.',
         'Vercel — hosting of the website pages.',
+        'Cloudflare — anonymous visit statistics (Cloudflare Web Analytics), with no cookies or personal data.',
         'Resend (EU region) — delivery of the staff sign-in e-mails.',
         'CookieBytes, Lda — technical maintenance.',
       ],
@@ -178,6 +180,7 @@ const es: PrivacyContent = {
         'Google (Gmail, Contactos, Calendar): la cuenta de la empresa, como se describe arriba.',
         'Fly.io (Ámsterdam, Países Bajos): alojamiento de la aplicación, la base de datos y las fotos.',
         'Vercel: alojamiento de las páginas del sitio.',
+        'Cloudflare: estadísticas de visitas anónimas (Cloudflare Web Analytics), sin cookies ni datos personales.',
         'Resend (región UE): envío de los correos de acceso del equipo.',
         'CookieBytes, Lda: mantenimiento técnico.',
       ],
@@ -238,6 +241,7 @@ const fr: PrivacyContent = {
         "Google (Gmail, Contacts, Agenda) — le compte de l'entreprise, comme décrit ci-dessus.",
         "Fly.io (Amsterdam, Pays-Bas) — hébergement de l'application, de la base de données et des photos.",
         'Vercel — hébergement des pages du site.',
+        'Cloudflare — statistiques de visites anonymes (Cloudflare Web Analytics), sans cookies ni données personnelles.',
         "Resend (région UE) — envoi des e-mails de connexion de l'équipe.",
         'CookieBytes, Lda — maintenance technique.',
       ],

@@ -71,6 +71,8 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
           # Full public URL (with base path); used for the hreflang/canonical links between languages
           NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
+          # Cloudflare Web Analytics site token (repo secret or variable); empty → no analytics script
+          NEXT_PUBLIC_CF_ANALYTICS_TOKEN: ${{ secrets.CF_ANALYTICS_TOKEN || vars.CF_ANALYTICS_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
